@@ -5,7 +5,7 @@ async function run() {
     try {
         const html_file = core.getInput("html_file");
 
-        const {sha, repo: {owner, repo}} = context;
+        const {gh-pages, repo: {owner, repo}} = context;
 
         core.setOutput(
             "url",
