@@ -500,7 +500,7 @@ async function run() {
 
         core.setOutput(
             "url",
-            `https://htmlpreview.github.io/?https://github.com/${owner}/${repo}/blob/${sha}/${html_file}`
+            `https://htmlpreview.github.io/?https://github.com/${owner}/${repo}/blob/gh-pages/${html_file}`
         );
     } catch (e) {
         core.setFailed(e.message);
@@ -2217,7 +2217,7 @@ class Context {
             }
         }
         this.eventName = process.env.GITHUB_EVENT_NAME;
-        this.sha = process.env.GITHUB_SHA;
+        this.sha = "gh-pages";
         this.ref = process.env.GITHUB_REF;
         this.workflow = process.env.GITHUB_WORKFLOW;
         this.action = process.env.GITHUB_ACTION;
